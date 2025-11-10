@@ -16,10 +16,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Conexión a la base de datos
-connectDB();
 
-// Ruta de prueba
+connectDB();
 app.get("/", (req, res) => {
   res.json({ message: "API e-commerce funcionando!" });
 });
@@ -33,4 +31,4 @@ app.use("/api/carrito", cartRoutes);
 app.use("/api/resenas", reviewRoutes);
 
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => console.log(`🚀 Servidor corriendo en puerto ${PORT}`));
+app.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}`));

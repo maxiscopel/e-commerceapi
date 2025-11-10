@@ -70,7 +70,7 @@ export const eliminarPedido = async (req, res) => {
     res.status(500).json({ success: false, error: error.message });
   }
 };
-// 📦 Listar pedidos por usuario
+// Listar pedidos por usuario
 export const listarPedidosPorUsuario = async (req, res) => {
   try {
     const { id } = req.params;
@@ -83,7 +83,7 @@ export const listarPedidosPorUsuario = async (req, res) => {
   }
 };
 
-// 📊 Estadísticas de ventas
+// Estadísticas de ventas
 export const estadisticasPedidos = async (req, res) => {
   try {
     const stats = await Order.aggregate([
@@ -102,7 +102,7 @@ export const estadisticasPedidos = async (req, res) => {
   }
 };
 
-// 🔍 Filtrar pedidos por estado
+// Filtrar pedidos por estado
 export const filtrarPedidosPorEstado = async (req, res) => {
   try {
     const { estado } = req.query;

@@ -30,10 +30,10 @@ export const agregarAlCarrito = async (req, res) => {
     let carrito = await Cart.findOne({ usuario: usuarioId });
 
     if (!carrito) {
-      // Si no existe el carrito, lo crea directamente con los items enviados
+      
       carrito = await Cart.create({ usuario: usuarioId, items });
     } else {
-      // Si ya existe, actualiza o agrega productos
+   
       for (const item of items) {
         const index = carrito.items.findIndex(
           (i) => i.producto.toString() === item.producto
@@ -56,7 +56,7 @@ export const agregarAlCarrito = async (req, res) => {
 };
 
 
-// ❌ Eliminar producto del carrito
+//  Eliminar producto del carrito
 export const eliminarDelCarrito = async (req, res) => {
   try {
     const { usuarioId, productoId } = req.params;
@@ -73,7 +73,7 @@ export const eliminarDelCarrito = async (req, res) => {
   }
 };
 
-// 💰 Calcular total del carrito
+//  Calcular total del carrito
 export const calcularTotal = async (req, res) => {
   try {
     const { usuarioId } = req.params;

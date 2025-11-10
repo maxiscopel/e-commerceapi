@@ -2,7 +2,7 @@ import Review from "../models/Review.js";
 import Product from "../models/Product.js";
 import Order from "../models/Order.js";
 
-// 📝 Crear reseña (solo si el usuario compró el producto)
+//  Crear reseña (solo si el usuario compró el producto)
 export const crearResena = async (req, res) => {
   try {
     const { usuario, producto, calificacion, comentario } = req.body;
@@ -32,7 +32,7 @@ export const crearResena = async (req, res) => {
   }
 };
 
-// 📋 Listar todas las reseñas
+//  Listar todas las reseñas
 export const listarResenas = async (req, res) => {
   try {
     const resenas = await Review.find()
@@ -44,7 +44,7 @@ export const listarResenas = async (req, res) => {
   }
 };
 
-// 📦 Reseñas de un producto específico
+//Reseñas de un producto específico
 export const resenasDeProducto = async (req, res) => {
   try {
     const { productId } = req.params;
@@ -57,7 +57,7 @@ export const resenasDeProducto = async (req, res) => {
   }
 };
 
-// 🌟 Promedio de calificaciones por producto
+// Promedio de calificaciones por producto
 export const promedioResenas = async (req, res) => {
   try {
     const top = await Review.aggregate([

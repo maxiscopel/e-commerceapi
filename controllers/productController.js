@@ -54,7 +54,7 @@ export const eliminarProducto = async (req, res) => {
   }
 };
 
-// 🔍 Filtrar por rango de precio y marca
+//  Filtrar por rango de precio y marca
 export const filtrarProductos = async (req, res) => {
   try {
     const { min, max, marca } = req.query;
@@ -70,7 +70,7 @@ export const filtrarProductos = async (req, res) => {
   }
 };
 
-// ⭐ Productos más reseñados
+//  Productos más reseñados
 export const productosTop = async (req, res) => {
   try {
     const top = await Product.aggregate([
@@ -84,7 +84,7 @@ export const productosTop = async (req, res) => {
   }
 };
 
-// 🔧 Actualizar stock
+// Actualizar stock
 export const actualizarStock = async (req, res) => {
   try {
     const { id } = req.params;

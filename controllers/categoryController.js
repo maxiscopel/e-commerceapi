@@ -54,7 +54,7 @@ export const eliminarCategoria = async (req, res) => {
   }
 };
 
-// 📊 Estadísticas: cantidad de productos por categoría
+// Estadísticas: cantidad de productos por categoría
 export const estadisticasCategorias = async (req, res) => {
   try {
     const stats = await Product.aggregate([
