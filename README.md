@@ -1,0 +1,1 @@
+link de postman: https://scopelmaximo-3092897.postman.co/workspace/maximo-scopel's-Workspace~983c5f79-c5e3-49e7-874e-5c30647d5b09/collection/49414973-971339aa-f9e0-4f07-90c8-ea0b5263c3b8?action=share&creator=49414973
